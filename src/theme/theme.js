@@ -139,12 +139,12 @@ export const blueThemeDark = {
 
 export const redThemeLight = {
     type: 'light',
-    primary: '#fff',
+    primary: '#f03939',
     primary400: '#dd4d4d',
     primary600: '#ea2424',
-    primary80: '#fffcc',
-    primary50: '#fff80',
-    primary30: '#fff4d',
+    primary80: '#f03939cc',
+    primary50: '#f0393980',
+    primary30: '#f039394d',
     secondary: '#eaeaea',
     secondary70: '#eaeaeab3',
     secondary50: '#eaeaea80',

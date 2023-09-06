@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { Grid } from '@material-ui/core'
 import { Link } from 'react-router-dom'
@@ -83,7 +83,7 @@ function ProjectPage() {
                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search project..." className={classes.search} />
                </div>
                <div className="project-container">
-                   <Grid className="project-grid" container direction="row" alignItems="center" justifyContent="center">
+                   <Grid className="project-grid" container direction="row"  alignItems="center" justifyContent="center">
                         {filteredArticles.map(project => (
                             <SingleProject
                                 theme={theme}

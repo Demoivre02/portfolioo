@@ -9,17 +9,17 @@ import { FaInternetExplorer,  FaChalkboardTeacher, FaCameraRetro, FaPinterest, F
 export const servicesData = [
     {
         id: 1,
-        title: 'Marketing',
+        title: 'Web development',
         // icon: <BiShoppingBag/>
     },
     {
         id: 2,
-        title: 'Content Writing',
+        title: 'Responsive Design',
         // icon: <BiPencil />
     },
     {
         id: 3,
-        title: 'Email Marketing',
+        title: 'Technical Article writing',
         // icon: <AiOutlineMail />
     },
     {
@@ -34,46 +34,10 @@ export const servicesData = [
     },
 
     {
-        id: 6,
-        title: 'Web Design',
-        // icon: <BsCodeSlash />
-    },
-    {
-        id: 7,
-        title: 'Photography',
-        // icon: <FaCameraRetro />
-    },
-    {
-        id: 8,
-        title: 'Pinterest Virtual Assistant',
-        // icon: <FaPinterest />
-    }, 
-    {
-        id: 9,
-        title: 'Video Editing',
-        // icon: <FaVideo />
-    },
-    {
         id: 10,
-        title: 'Data Entry', 
+        title: 'AI knowledge', 
         // icon: <BsClipboardData />
     },
-    {
-        id: 11,
-        title: 'Ebook Writing',
-        // icon: <FaTabletAlt />
-    },
-    {
-        id: 12,
-        title: 'Audio Transcription',
-        // icon: <AiFillAudio />
-    },
-    {
-        id: 13,
-        title: 'Blog Posting',
-        // icon: <FaRegNewspaper />
-    },
-
 ]
 
 // Uncomment your required service.

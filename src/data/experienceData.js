@@ -11,7 +11,7 @@ export const experienceData = [
         company: 'CDLP Hub LTD',
         jobtitle: 'Frontend developer',
         startYear: 'November 2022',
-        endYear: ''
+        endYear: 'November 2023'
     },
     {
         id: 3,

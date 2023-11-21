@@ -61,6 +61,15 @@ export const projectsData = [
         demo: '',
         image: six
     },
+    {
+        id: 7, 
+        projectName: 'Data management system',
+        projectDesc: 'Mini data management project to demonstrate how data content can be managed effectively.',
+        tags: ['Angular', 'css', 'Typescript'],
+        code: 'https://github.com/Demoivre02/stackBuildTest',
+        demo: 'https://stack-build-test.vercel.app/',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEPYd-OXiGo0awNa8n4o3NWlFcpiXsZWalpw&usqp=CAU'
+    },
 ]
 
 

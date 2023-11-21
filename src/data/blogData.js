@@ -24,6 +24,14 @@ export const blogData = [
         image: 'https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2EP14mWkbx9sq03nWnRSGT/f1d22d88bb5dde030275f9520c0f2e92/React_YT_Thumbnail.png',
         url: 'https://davidwrites.hashnode.dev/everything-you-should-know-about-usereducer-as-a-react-developer'
     },
+    {
+        id: 4,
+        title: 'Exploring the World of Web Development: SPA vs SSR vs SSG',
+        description: 'Navigating the diverse landscape of web development: SPA for interactivity, SSR for performance, and SSG for optimized static sites - the choices abound! ',
+        date: 'Nov 21, 2023',
+        image: 'https://images.prismic.io//intuzwebsite/2a1cbf35-73c5-46ed-a3d4-5842db2ad20a_Banner.png?w=1200&q=75&auto=format,compress&fm=png8',
+        url: 'https://davidwrites.hashnode.dev/exploring-the-world-of-web-development-spa-vs-ssr-vs-ssg'
+    },
 
 ]
 

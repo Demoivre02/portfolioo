@@ -1,103 +1,85 @@
- export const skillsData = [
-    'HTML',
-    'CSS',
-    'Tailwind',
-    'Bootstrap',
-    'Javascript',
-    'Typescript',
-    'React',
-    'ViteJS',
-    'Angular',
-    'Next JS',
-    'Docker',
-    'Firebase',
+export const skillsData = [
+    // Frontend Core
+    'HTML5',
+    'CSS3',
+    'JavaScript',
+    'TypeScript',
+    'React.js',
+    'Next.js',
+    'Node.js',
+    'Express.js',
+    
+    // Styling & UI
+    'Tailwind CSS',
+    'Chakra UI',
+    'SASS/SCSS',
+    'CSS Modules',
+    'Styled Components',
+    
+    // State Management & Tools
+    'Redux',
+    'Context API',
+    'Webpack',
+    'Vite',
     'Git',
+    'GitHub',
+    'npm',
+    'yarn',
+    
+    // Testing & Quality
+    'Jest',
+    'React Testing Library',
+    'Cypress',
+    'Unit Testing',
+    'Integration Testing',
+    
+    // Performance & Optimization
+    'PWA',
+    'SEO',
+    'Web Vitals',
+    'Code Splitting',
+    'Lazy Loading',
+    
+    // APIs & Data
+    'REST APIs',
+    'WebSockets',
+    'Firebase',
+    
+    // Cloud & DevOps
+    'AWS',
+    'Docker',
+    'CI/CD',
+    'CloudFormation',
+    'Lambda',
+    'EC2',
+    'S3',
+    'DynamoDB',
+    'CloudFront',
+    'API Gateway',
+    
+    // AI/ML & Data Science
+    'Python',
+    'TensorFlow',
+    'PyTorch',
+    'Scikit-Learn',
+    'NumPy',
+    'Pandas',
+    'Matplotlib',
+    'Seaborn',
+    'LangChain',
+    'Hugging Face',
+    'OpenAI APIs',
+    'Anthropic Claude',
+    
+    // Computer Vision & NLP
+    'OpenCV',
+    'YOLO',
+    
+    // Design & Collaboration
     'Figma',
+    
+    // Operating Systems
+    'Linux',
+    'Unix',
+    'Shell Scripting',
 ]
-
-// Choose your skills from below. Make sure it's in the same format and spelled correctly.
-// Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
-
-
-// AVAILABLE SKILLS
-
-/* 
-    HTML
-    CSS
-    JS 
-    React
-    Next JS
-    Nuxt JS
-    Node JS
-    Vue
-    Angular
-    Docker
-    Photoshop
-    Illustrator
-    Svelte
-    GCP
-    Azure
-    Fastify
-    Haxe
-    Ionic
-    Markdown
-    Microsoft Office
-    Picsart
-    Sketch
-    Unity
-    WolframAlpha
-    Adobe XD
-    After Effects
-    Bootstrap
-    Bulma
-    CapacitorJs
-    Coffeescript
-    MemSQL
-    C
-    C++
-    C#
-    Python
-    Java
-    Julia
-    Matlab
-    Swift
-    Ruby
-    Kotlin
-    Go
-    PHP
-    Flutter
-    Dart
-    Typescript
-    Swift
-    Git
-    Figma
-    Canva
-    Ubuntu
-    Bootstrap
-    MongoDB
-    Tailwind
-    ViteJS
-    VuetifyJS
-    MySQL
-    PostgreSQL
-    AWS
-    Firebase
-    Blender
-    Premiere Pro
-    Adobe Audition
-    Deno
-    Django
-    Gimp
-    Graphql
-    Lightroom
-    MaterialUI
-    Nginx
-    Numpy
-    OpenCV
-    Pytorch
-    Selenium
-    Strapi
-    Tensorflow
-    Webex
-    Wordpress
-*/

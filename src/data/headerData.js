@@ -3,8 +3,8 @@ import myimage from '../assets/png/me.jpg'
 
 export const headerData = {
     name: 'Animasaun David',
-    title: "Frontend Engineer",
-    desciption:"An intelligent, contemplative individual who excels in crafting exceptional websites that prioritize responsiveness and deliver a seamless user experience. I consistently prioritize user needs and are deeply committed to optimizing application performance and enhancing security.",
+    title: "Software Engineer",
+    desciption:"Experienced Frontend Engineer with 3+ years of expertise in building scalable, responsive web applications using modern JavaScript frameworks. Proven track record of transforming complex UI/UX designs into pixel-perfect, high-performance interfaces that enhance user engagement and reduce bounce rates. Strong background in React ecosystem, performance optimization, and cross-browser compatibility",
     image: myimage,
     resumePdf: resume
 }

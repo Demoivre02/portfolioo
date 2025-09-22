@@ -1,4 +1,4 @@
 export const aboutData = {
-    title: "Who I am",
+    title: "Who I am?",
     description1: "I'm a versatile Frontend Engineer with extensive experience specializing in building scalable, high-performance web applications at the intersection of healthcare technology and artificial intelligence.  I architect enterprise-scale healthcare platforms, telehealth solutions, and AI-driven analytics dashboards using React.js, Next.js, and TypeScript. My unique combination of frontend expertise, machine learning integration skills (including LLM fine-tuning with Anthropic Claude 3.5 Sonnet), and AWS cloud proficiency allows me to deliver pixel-perfect interfaces that significantly improve user engagement while reducing operational costs for healthcare organizations across Africa. I excel at transforming complex healthcare workflows and AI/ML models into intuitive, accessible user experiences, establishing coding standards and mentoring development teams while maintaining exceptional uptime for mission-critical medical applications through robust DevOps practices and HIPAA-compliant cloud architecture.",
 }

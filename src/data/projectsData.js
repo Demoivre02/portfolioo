@@ -1,120 +1,82 @@
 import one from '../assets/png/one (1).png'
-import two from '../assets/svg/projects/two.svg'
 import three from '../assets/png/three.png'
 import four from '../assets/png/four.png'
 import five from '../assets/png/five.jpg'
-import six from '../assets/png/last.png'
 import eight from '../assets/png/eight.png'
 import nine from '../assets/png/nine.png'
 import ten from '../assets/png/ten.png'
 
-
 export const projectsData = [
     {
         id: 1,
-        projectName: 'Medical appointment',
-        projectDesc: 'This project solves the problem of having to go to an hospital to book an appointment, only for the appoint ment to be delayed or postponed. I have created a solution that helps you book an appointment from the comfort of your home.',
-        tags: ['vite +  react', 'Javascript', 'Tailwind CSS', 'Chakra UI', 'Firebase', 'react hot toast'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://iota-amber.vercel.app/',
+        projectName: 'MailVault (Lttr) — Serverless Document Platform',
+        projectDesc: 'A mail digitization platform I architected and built end to end on AWS. Users capture physical mail, Textract extracts the text, and Bedrock summarizes, categorizes and answers questions about it. The whole stack is codified in a single parameterized CloudFormation template: Cognito with Google OAuth federation, an S3 document bucket, DynamoDB single-table design and a scoped IAM policy, deployable per environment. Hardened with strict Content-Security-Policy, HSTS, and JWT verification against Cognito JWKS in edge middleware on every protected route. Abuse and cost controls run on DynamoDB atomic counters: sliding-window rate limiting at 10 login attempts per IP per 15 minutes, plus per-user daily AI quotas that hold under concurrent requests. Ships as a PWA with a React Native client designed against the same unchanged API.',
+        tags: ['AWS', 'CloudFormation', 'Lambda', 'S3', 'DynamoDB', 'Cognito', 'Textract', 'Bedrock', 'Next.js', 'TypeScript', 'WebAuthn'],
+        code: '',
+        demo: 'https://getlttr.com',
+        image: ten
+    },
+    {
+        id: 2,
+        projectName: 'High-Volume Ingestion Pipeline Re-architecture',
+        projectDesc: 'Production data pipeline work at Cornerstone OnDemand, described without internal detail. The pipeline pulls from a third-party API across roughly 19 partitioned sources at 2.2M+ records per run and delivers to S3 for BI consumption. Several partitions were silently producing empty output: exports completed cleanly, returned zero rows and reported success, so nothing alerted. I proved the fault with a controlled comparison against the legacy pipeline on identical same-day data, 1,174 rows against 0, eliminated severity filters, state, time window and API concurrency one at a time, and traced it to a Unicode en dash standing in where an ASCII hyphen was expected inside a filter key sent over the wire. The local code path normalized both sides before matching so it agreed with itself, while the raw filter sent to the server matched nothing. I then re-architected extraction from per-partition filtered queries to a single partition map plus two global scoped exports, cutting external API jobs per run from roughly 133 to 3, and converted a fully materialized in-memory path to generator streaming with multipart upload to remove a multi-gigabyte out-of-memory failure mode.',
+        tags: ['Python', 'AWS S3', 'boto3', 'Jenkins', 'Data Engineering', 'Root Cause Analysis', 'Streaming'],
+        code: '',
+        demo: '',
+        image: three
+    },
+    {
+        id: 3,
+        projectName: 'Agent Gateway Identity with Microsoft Entra ID',
+        projectDesc: 'Integrated Microsoft Entra ID as the OAuth2 identity provider for an Amazon Bedrock AgentCore Gateway, standing up the machine-to-machine client-credentials flow so MCP clients authenticate with short-lived JWTs instead of long-lived static credentials. The interesting part was the debugging: three distinct causes of 403 rejection produced identical symptoms, and separating them meant working through Entra app registration, application scopes and short names, required group membership, JWT audience and issuer alignment, and custom scope-claim validation on the gateway authorizer. Also closed a least-privilege gap where token retrieval failed because no identity-based policy permitted ssm:GetParameter, keeping client secrets in Parameter Store rather than in code or environment files.',
+        tags: ['Microsoft Entra ID', 'OAuth2', 'OIDC', 'JWT', 'AWS Bedrock AgentCore', 'MCP', 'IAM', 'Python'],
+        code: '',
+        demo: '',
+        image: four
+    },
+    {
+        id: 4,
+        projectName: 'AWS Cost Guardrails & Anomaly Response',
+        projectDesc: 'Designed a proactive cost control system that stays silent on normal days and escalates only when spend is abnormal. An EventBridge-scheduled Lambda queries Cost Explorer against tiered daily thresholds, with DynamoDB-backed deduplication so a crossed threshold pages once rather than hourly, SNS fan-out to Slack and email, and LLM-generated cause analysis that names the likely service in plain language instead of just reporting a number. Critical-level remediation runs through Step Functions and is gated behind resource tags and human approval, with dry run as the default launch mode. AWS Budgets and Cost Anomaly Detection are wired in as independent backup signals, since billing data is not real time and a single source of truth would be a single point of failure.',
+        tags: ['AWS Lambda', 'Cost Explorer', 'EventBridge', 'Step Functions', 'SNS', 'DynamoDB', 'AWS Budgets', 'Python'],
+        code: '',
+        demo: '',
         image: one
     },
     {
-        id: 8,
-        projectName: 'sales management system',
-        projectDesc: 'A simple sales management system that helps you keep track of your sales, customers and products. It also helps you generate reports and analytics to help you make better business decisions.',
-        tags: ['vite +  react', 'Javascript', 'Tailwind CSS', 'Chakra UI', 'Firebase', 'react hot toast'],
-        code: '',
-        demo: 'https://my-autobiz.vercel.app/',
-        image: eight
-    },
-    {
-        id: 9,
-        projectName: 'Crypto tracker',
-        projectDesc: 'A simple crypto tracker that helps you keep track of your favorite cryptocurrencies. It also helps you get the latest news and updates about the crypto market.',
-        tags: ['NextJs', 'Javascript', 'Tailwind CSS', 'react hot toast'],
-        code: 'https://github.com/Demoivre02/crypto-tracker',
-        demo: 'https://crypto-tracker-azure-alpha.vercel.app/',
-        image: nine
-    },
-    {
-        id: 10, 
-        projectName: 'calebyte health',
-        projectDesc: 'calebyte health is a healthcare platform that connects patients with doctors and other healthcare professionals. It also provides a platform for telemedicine and online consultations.',
-        tags: ['Nextjs', 'css', 'Typescript'],
+        id: 5,
+        projectName: 'Calebyte Health',
+        projectDesc: 'A healthcare platform connecting patients with doctors and other healthcare professionals, with support for telemedicine and online consultations.',
+        tags: ['Next.js', 'TypeScript', 'CSS'],
         code: 'https://github.com/Demoivre02/stackBuildTest',
         demo: 'https://calebyte-health.vercel.app/',
         image: ten
     },
     {
-        id: 5,
-        projectName: 'Credit homes (frontend)',
-        projectDesc: 'A simple solution for accommodation problems, this solution solves the problems of hotel booking, you can just jump on the site and book your apartment or short-let from wherever you are.',
-        tags: [ 'Typescript', 'Chakra UI', 'Next Js', 'Javascript / Typescript libraries'],
+        id: 6,
+        projectName: 'Crypto Tracker',
+        projectDesc: 'A cryptocurrency tracker for following favourite coins alongside the latest market news and updates.',
+        tags: ['Next.js', 'JavaScript', 'Tailwind CSS'],
+        code: 'https://github.com/Demoivre02/crypto-tracker',
+        demo: 'https://crypto-tracker-azure-alpha.vercel.app/',
+        image: nine
+    },
+    {
+        id: 7,
+        projectName: 'Sales Management System',
+        projectDesc: 'A sales management system for tracking sales, customers and products, with reporting and analytics to support business decisions.',
+        tags: ['Vite', 'React', 'JavaScript', 'Tailwind CSS', 'Firebase'],
+        code: '',
+        demo: 'https://my-autobiz.vercel.app/',
+        image: eight
+    },
+    {
+        id: 8,
+        projectName: 'Credit Homes',
+        projectDesc: 'An accommodation booking platform for hotels and short-lets, built as the customer-facing frontend.',
+        tags: ['TypeScript', 'Next.js', 'Chakra UI'],
         code: 'https://github.com/Demoivre02/credithomes-customer',
         demo: 'https://credithomes-customer.vercel.app/auth/signin',
         image: five
     },
-    {
-        id: 3,
-        projectName: 'Brokers connect',
-        projectDesc: 'Data visualization platform that helps stock brokers keep track of stocks. ',
-        tags: ['Typescript', 'Chakra Ui', 'Tailwind CSS', 'Next Js' ,'Apex charts'],
-        code: 'https://github.com/Demoivre02/brokersconnect-fe',
-        demo: 'https://brokersconnect-fe.vercel.app/',
-        image: three
-    },
-    {
-        id: 4,
-        projectName: 'Google keep clone',
-        projectDesc: 'A custom made google keep clone, built entirely with angular. The intention of this project was to sharpen my angular skills',
-        tags: ['Angular', 'Firebase', 'Docker'],
-        code: 'https://github.com/Demoivre02/keep-clone',
-        demo: 'https://keep-648ae.web.app',
-        image: four
-    },
-    {
-        id: 2,
-        projectName: 'Bu-one',
-        projectDesc: 'A simple modern day landing page',
-        tags: ['vite +  react', 'Tailwind CSS','React animations library'],
-        code: 'https://github.com/Demoivre02/BUone',
-        demo: 'https://b-uone.vercel.app/',
-        image: two
-    },
-    {
-        id: 6,
-        projectName: 'Portfolio',
-        projectDesc: 'This app you are surfing, is my portfolio',
-        tags: ['vite +  react', 'css', 'Javascript'],
-        code: 'https://github.com/Demoivre02/portfolioo',
-        demo: '',
-        image: six
-    },
-
-    {
-        id: 7, 
-        projectName: 'Data management system',
-        projectDesc: 'Mini data management project to demonstrate how data content can be managed effectively.',
-        tags: ['Angular', 'css', 'Typescript'],
-        code: 'https://github.com/Demoivre02/stackBuildTest',
-        demo: 'https://stack-build-test.vercel.app/',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEPYd-OXiGo0awNa8n4o3NWlFcpiXsZWalpw&usqp=CAU'
-    },
 ]
-
-
-// Do not remove any fields.
-// Leave it blank instead as shown below
-
-/* 
-{
-    id: 1,
-    projectName: 'Car Pooling System',
-    projectDesc: '',
-    tags: ['Flutter', 'React'],
-    code: '',
-    demo: '',
-    image: ''
-}, 
-*/

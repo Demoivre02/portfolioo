@@ -1,45 +1,36 @@
 /* eslint-disable */
-import { BiShoppingBag, BiPencil } from "react-icons/bi";
-import { BsCodeSlash, BsClipboardData } from "react-icons/bs";
-import { AiOutlineMail, AiFillAudio } from "react-icons/ai";
-import { FaInternetExplorer,  FaChalkboardTeacher, FaCameraRetro, FaPinterest, FaVideo, FaTabletAlt, FaRegNewspaper } from "react-icons/fa";
-
- 
 
 export const servicesData = [
     {
         id: 1,
-        title: 'Web development',
-        // icon: <BiShoppingBag/>
+        title: 'Cloud Architecture & Migration',
     },
     {
         id: 2,
-        title: 'Responsive Design',
-        // icon: <BiPencil />
+        title: 'Infrastructure as Code',
     },
     {
         id: 3,
-        title: 'Technical Article writing',
-        // icon: <AiOutlineMail />
+        title: 'CI/CD Pipeline Engineering',
     },
     {
         id: 4,
-        title: 'Internet Research',
-        // icon: <FaInternetExplorer />
+        title: 'Observability & Incident Response',
     },
     {
         id: 5,
-        title: 'Tutoring',
-        // icon: <FaChalkboardTeacher />
+        title: 'Cloud Security & IAM Hardening',
     },
-
     {
-        id: 10,
-        title: 'AI knowledge', 
-        // icon: <BsClipboardData />
+        id: 6,
+        title: 'Data Pipeline Engineering',
+    },
+    {
+        id: 7,
+        title: 'Cloud Cost Optimization',
+    },
+    {
+        id: 8,
+        title: 'Technical Writing & Mentoring',
     },
 ]
-
-// Uncomment your required service.
-// Couldn't find the required services? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
-// You can also add on your own 😉.

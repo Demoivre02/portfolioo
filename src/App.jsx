@@ -1,25 +1,30 @@
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { Main, BlogPage, ProjectPage } from './pages'
-import ShouldscrollToTop from './components/BackToTop/ShouldscrollToTop';
-import ScrollToTop from './utils/ScrollToTop'
+import Nav from './sections/Nav'
+import Hero from './sections/Hero'
+import About from './sections/About'
+import Skills from './sections/Skills'
+import Projects from './sections/Projects'
+import Experience from './sections/Experience'
+import Credentials from './sections/Credentials'
+import Contact from './sections/Contact'
+import Footer from './sections/Footer'
+import useReveal from './sections/useReveal'
+import { headerData } from './data/headerData'
 
-import './App.css'
-
-function App() {
+export default function App() {
+  useReveal()
   return (
-    <div className="app">
-      <Router>
-        <ScrollToTop/>
-        <Switch>
-          <Route path="/" exact component={Main} />
-          <Route path="/blog" exact component={BlogPage} />
-          <Route path="/projects" exact component={ProjectPage} />
-          <Redirect to="/" />
-        </Switch>
-      </Router>
-      <ShouldscrollToTop/>
-    </div>
-  );
+    <>
+      <Nav resumePdf={headerData.resumePdf} />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Credentials />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  )
 }
-
-export default App;
